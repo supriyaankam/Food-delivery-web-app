@@ -6,23 +6,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Screenshots
 
-**Admin Dashboard**  
-![Admin Dashboard](assets/screenshots/admindashboard.jpg)
-
-**Cart Page**  
-![Cart](assets/screenshots/cart.jpg)
-
-**Coins Page**  
-![Coins](assets/screenshots/coins.jpg)
-
-**Home Page**  
-![Home](assets/screenshots/home.jpg)
+**Login Page**  
+![Login](assets/screenshots/login.jpg)
 
 **Landing Page**  
 ![Landing Page](assets/screenshots/landingpage.jpg)
 
-**Login Page**  
-![Login](assets/screenshots/login.jpg)
+**Home Page**  
+![Home](assets/screenshots/home.jpg)
+
+**Cart Page**  
+![Cart](assets/screenshots/cart.jpg)
 
 **Payment Page**  
 ![Payment](assets/screenshots/payment.jpg)
@@ -30,11 +24,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 **Payment Success Page**  
 ![Payment Success](assets/screenshots/paymentsuccess.jpg)
 
-**Rating Page**  
-![Rating](assets/screenshots/rating.jpg)
+**Admin Dashboard**  
+![Admin Dashboard](assets/screenshots/admindashboard.jpg)
 
 **User Notifications**  
 ![User Notifications](assets/screenshots/usernotifications.jpg)
+
+**Rating Page**  
+![Rating](assets/screenshots/rating.jpg)
+
+**Coins Page**  
+![Coins](assets/screenshots/coins.jpg)
+
+
 
 ---
 
