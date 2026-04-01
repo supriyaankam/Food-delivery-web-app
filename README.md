@@ -121,7 +121,6 @@ Create a `.env` file in the backend folder and add:
 ```
 MONGO_URL=your_mongodb_url
 JWT_SECRET=your_secret_key
-STRIPE_SECRET_KEY=your_stripe_key
 ```
 
 ---
