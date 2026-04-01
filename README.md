@@ -17,7 +17,6 @@ A full-stack **MERN (MongoDB, Express, React, Node.js)** food delivery applicati
 
 ### 🛠️ Admin Panel
 
-* Manage food items (Add / Update / Delete)
 * Manage orders
 * Dashboard overview
 * User notifications
@@ -27,7 +26,7 @@ A full-stack **MERN (MongoDB, Express, React, Node.js)** food delivery applicati
 * JWT Authentication
 * Password hashing using Bcrypt
 * REST APIs
-* Stripe Payment Integration
+* Payment Integration
 
 ---
 
@@ -81,7 +80,6 @@ A full-stack **MERN (MongoDB, Express, React, Node.js)** food delivery applicati
 * Backend: Node.js, Express.js
 * Database: MongoDB
 * Authentication: JWT
-* Payments: Stripe
 
 ---
 
