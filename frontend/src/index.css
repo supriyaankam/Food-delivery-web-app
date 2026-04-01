@@ -1,0 +1,300 @@
+/* ===== GLOBAL RESET ===== */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ===== CODE FONT ===== */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ===== LIGHT MODE ===== */
+
+body.light {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+/* ===== DARK MODE ===== */
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* ===== CATEGORY SECTION ===== */
+
+.category {
+  text-align: center;
+  cursor: pointer;
+  padding: 6px;
+  transition: transform 0.2s ease;
+}
+
+.category img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+
+.category:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Dark mode category border */
+
+body.dark .category img {
+  border: 2px solid #333;
+}
+
+/* ===== FOOD GRID ===== */
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* ===== FOOD CARD ===== */
+
+.food-card {
+  background: white;
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Dark mode card */
+
+body.dark .food-card {
+  background: #1e1e1e;
+  color: white;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+/* Hover animation */
+
+.food-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ===== FOOD IMAGE ===== */
+
+.food-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.food-card:hover .food-image {
+  transform: scale(1.05);
+}
+
+/* ===== FOOD TEXT ===== */
+
+.food-name {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.food-desc {
+  font-size: 13px;
+  color: gray;
+}
+
+body.dark .food-desc {
+  color: #ccc;
+}
+
+.food-price {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* ===== RATING ===== */
+
+.food-rating {
+  color: #f1c40f;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+/* ===== QUANTITY CONTROLS ===== */
+
+.quantity-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.qty-button {
+  border: none;
+  background: #ff4d4d;
+  color: white;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.qty-button:hover {
+  background: #e63939;
+}
+
+.qty-number {
+  font-weight: bold;
+}
+
+/* ===== ADD TO CART BUTTON ===== */
+
+.food-card-btn {
+  margin-top: 10px;
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.food-card-btn:hover {
+  background: #e63939;
+}
+
+/* ===== INPUT / SEARCH ===== */
+
+input {
+  outline: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+body.dark input {
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+}
+
+/* ===== BUTTONS ===== */
+
+button {
+  cursor: pointer;
+}
+
+/* ===== NAVBAR DARK MODE ===== */
+
+body.dark nav {
+  background: #1a1a1a !important;
+}
+
+/* ===================================================== */
+/* ===== LOGIN & SIGNUP PAGE (NEW - THEME SUPPORT) ===== */
+/* ===================================================== */
+
+.login-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background: url('./assets/bg-food.jpg') no-repeat center center/cover;
+}
+
+/* Light overlay */
+
+body.light .login-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Dark overlay */
+
+body.dark .login-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Login / Signup Card */
+
+.login-card {
+  position: relative;
+  z-index: 1;
+
+  width: 350px;
+  padding: 30px;
+  border-radius: 20px;
+
+  background: white;
+  color: #222;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Dark mode card */
+
+body.dark .login-card {
+  background: #1e1e1e;
+  color: white;
+}
+
+/* ===================================================== */
+/* ===== FOOTER (FIXED THEME ISSUE) ===== */
+/* ===================================================== */
+
+footer {
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Light mode footer (same style as your theme) */
+
+body.light footer {
+  background: #ff4d4d;
+  color: white;
+}
+
+/* Dark mode footer (match navbar) */
+
+body.dark footer {
+  background: #1a1a1a;
+  color: #ccc;
+  border-top: 1px solid #333;
+}
