@@ -240,8 +240,9 @@ const styles = {
   container: { textAlign: "center", marginTop: 50 },
   buttonsContainer: {
     display: "flex",
-    justifyContent: "center",
-    gap: 20,
+    flexDirection: "column", // ✅ vertical stack
+    alignItems: "center",    // center horizontally
+    gap: 15,                 // space between buttons
     marginTop: 30,
   },
   button: {
@@ -252,5 +253,6 @@ const styles = {
     borderRadius: 8,
     fontSize: 16,
     cursor: "pointer",
+    width: 200, // optional: same width for all buttons
   },
 };
