@@ -1,108 +1,168 @@
-# Food Delivery Web App
+# 🍔 Food Delivery Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack **MERN (MongoDB, Express, React, Node.js)** food delivery application where users can browse food items, add to cart, place orders, and admins can manage the platform.
 
 ---
 
-## Screenshots
+## 🚀 Features
 
-**Login Page**  
+### 👤 User Panel
+
+* Register / Login / Logout
+* Browse food items
+* Add to cart
+* Place orders
+* View order history
+* Ratings & feedback
+
+### 🛠️ Admin Panel
+
+* Manage food items (Add / Update / Delete)
+* Manage orders
+* Dashboard overview
+* User notifications
+
+### 🔐 Security & Tech
+
+* JWT Authentication
+* Password hashing using Bcrypt
+* REST APIs
+* Stripe Payment Integration
+
+---
+
+## 📸 Screenshots
+
+### Login Page
+
 ![Login](assets/screenshots/login.jpg)
 
-**Landing Page**  
+### Landing Page
+
 ![Landing Page](assets/screenshots/landingpage.jpg)
 
-**Home Page**  
+### Home Page
+
 ![Home](assets/screenshots/home.jpg)
 
-**Cart Page**  
+### Cart Page
+
 ![Cart](assets/screenshots/cart.jpg)
 
-**Payment Page**  
+### Payment Page
+
 ![Payment](assets/screenshots/payment.jpg)
 
-**Payment Success Page**  
+### Payment Success Page
+
 ![Payment Success](assets/screenshots/paymentsuccess.jpg)
 
-**Admin Dashboard**  
+### Admin Dashboard
+
 ![Admin Dashboard](assets/screenshots/admindashboard.jpg)
 
-**User Notifications**  
+### User Notifications
+
 ![User Notifications](assets/screenshots/usernotifications.jpg)
 
-**Rating Page**  
+### Rating Page
+
 ![Rating](assets/screenshots/rating.jpg)
 
-**Coins Page**  
+### Coins Page
+
 ![Coins](assets/screenshots/coins.jpg)
-
-
 
 ---
 
-## Available Scripts
+## 🛠️ Tech Stack
 
-In the project directory, you can run:
+* Frontend: React.js
+* Backend: Node.js, Express.js
+* Database: MongoDB
+* Authentication: JWT
+* Payments: Stripe
+
+---
+
+## ⚙️ Run Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/supriyaankam/Food-delivery-web-app.git
+cd Food-delivery-web-app
+```
+
+---
+
+### 2. Install Backend Dependencies
+
+```bash
+cd backend
+npm install
+npm start
+```
+
+---
+
+### 3. Install Frontend Dependencies
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the backend folder and add:
+
+```
+MONGO_URL=your_mongodb_url
+JWT_SECRET=your_secret_key
+STRIPE_SECRET_KEY=your_stripe_key
+```
+
+---
+
+## 📜 Available Scripts
 
 ### `npm start`
 
-Runs the app in the development mode.  
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.  
-You may also see any lint errors in the console.
+Runs the app in development mode.
+Open http://localhost:3000
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.  
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs test cases.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.  
-It correctly bundles React in production mode and optimizes the build for the best performance.  
-The build is minified and the filenames include the hashes.  
-Your app is ready to be deployed!  
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds app for production.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**  
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. At this point you're on your own.  
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments.
+⚠️ Irreversible operation.
 
 ---
 
-## Learn More
+## 📚 Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).  
+* https://facebook.github.io/create-react-app/docs/getting-started
+* https://reactjs.org/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contributions are welcome!
+Feel free to open issues or submit pull requests.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📄 License
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
