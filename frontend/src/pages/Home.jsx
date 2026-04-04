@@ -48,17 +48,25 @@ const Home = ({ search = "", user }) => {
 
       setFoods(uniqueFoods);
 
-      /* Unique categories */
+      /* Unique categories: Keep them strictly ordered so they don't shuffle! */
+      const predefinedOrder = categoriesList.map((c) => c.name);
 
       const uniqueCategories = [
         ...new Set(uniqueFoods.map((food) => food.category)),
-      ];
+      ].sort((a, b) => {
+        const indexA = predefinedOrder.indexOf(a);
+        const indexB = predefinedOrder.indexOf(b);
+        if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+        if (indexA !== -1) return -1;
+        if (indexB !== -1) return 1;
+        return a.localeCompare(b);
+      });
 
       setCategories(uniqueCategories);
 
-      /* Top 5 dishes */
-
-      setTopDishes(uniqueFoods.slice(0, 5));
+      /* Top Dishes: Highly rated ones */
+      const sortedByRating = [...uniqueFoods].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+      setTopDishes(sortedByRating.slice(0, 5));
 
       setLoading(false);
     } catch (err) {
