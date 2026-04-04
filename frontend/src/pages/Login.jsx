@@ -4,6 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { UserContext } from "../context/UserContext";
+import bgFood from "../assets/bg-food.jpg";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -96,10 +97,21 @@ const Login = () => {
           display: flex;
           justify-content: center;
           align-items: center;
-          background: #fff1e6;
+          background: url(${bgFood}) center/cover no-repeat;
+          position: relative;
+        }
+        
+        .signup-container::before {
+          content: "";
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(0, 0, 0, 0.4);
+          z-index: 0;
         }
 
         .signup-card {
+          position: relative;
+          z-index: 1;
           background: #fff;
           padding: 30px;
           width: 360px;
@@ -153,8 +165,8 @@ const Login = () => {
         }
 
         /* 🌙 DARK MODE SAME AS SIGNUP */
-        body.dark .signup-container {
-          background: #111827;
+        body.dark .signup-container::before {
+          background: rgba(0, 0, 0, 0.7);
         }
 
         body.dark .signup-card {
