@@ -23,8 +23,8 @@ router.post("/", authMiddleware, async (req, res) => {
   try {
     const { name, price, category, canteen, image } = req.body;
 
-    if (!name || !price || !category || !canteen) {
-      return res.status(400).json({ success: false, message: "All fields are required" });
+    if (!name || !price || !category) {
+      return res.status(400).json({ success: false, message: "Required fields missing" });
     }
 
     const newFood = new Food({
