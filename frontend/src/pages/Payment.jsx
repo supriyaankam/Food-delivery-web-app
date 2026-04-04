@@ -5,6 +5,7 @@ import confetti from "canvas-confetti";
 import { CartContext } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { getDefaultImage } from "../utils/defaultImages";
 
 const COIN_VALUE = 5;
 
@@ -124,7 +125,7 @@ const Payment = () => {
         name: item.name,
         price: Number(item.price),
         quantity: Number(item.quantity),
-        image: item.image,
+        image: item.image || getDefaultImage(item.category),
       }));
 
       const res = await axios.post("http://localhost:5000/api/orders", {
