@@ -145,7 +145,8 @@ router.post("/", async (req, res) => {
     console.error("Order creation error:", err.message);
     res.status(500).json({
       success: false,
-      message: "Server error while creating order",
+      message: err.message || "Server error while creating order",
+      error: err.stack,
     });
   }
 });
