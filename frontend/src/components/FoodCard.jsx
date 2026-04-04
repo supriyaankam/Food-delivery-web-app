@@ -3,6 +3,7 @@
 import { useContext, useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import { CartContext } from "../context/CartContext";
+import { getDefaultImage } from "../utils/defaultImages";
 
 const FoodCard = ({ food, isAdmin }) => {
   const { cartItems, addToCart, increaseQuantity, decreaseQuantity } =
@@ -65,8 +66,12 @@ const FoodCard = ({ food, isAdmin }) => {
       {/* FOOD IMAGE */}
       <img
         className="food-image"
-        src={food.image || "/images/default-food.jpg"}
+        src={food.image || getDefaultImage(food.category)}
         alt={food.name}
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = getDefaultImage(food.category);
+        }}
       />
 
       {/* FOOD NAME */}
