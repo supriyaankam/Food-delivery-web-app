@@ -2,6 +2,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
+import { getDefaultImage } from "../utils/defaultImages";
 import "./cart.css";
 
 const COIN_VALUE = 5;
@@ -105,9 +106,13 @@ const Cart = () => {
                 <tr key={item._id}>
                   <td>
                     <img
-                      src={item.image}
+                      src={item.image || getDefaultImage(item.category)}
                       alt={item.name}
                       className="cart-img"
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = getDefaultImage(item.category);
+                      }}
                     />
                   </td>
                   <td>{item.name}</td>
