@@ -32,6 +32,7 @@ import UserNotifications from "./pages/UserNotifications";
 
 /* ADMIN */
 import AdminOrders from "./pages/AdminOrders";
+import AdminFoods from "./pages/Admin";
 
 /* LANDING PAGE */
 import bgFood from "./assets/bg-food.jpg";
@@ -138,9 +139,14 @@ function AppContent() {
           {isNormalUser && user && <NotificationBell user={user} />}
 
           {isAdmin ? (
-            <Link to="/admin-orders" style={styles.navItem}>
-              📊 <span>Dashboard</span>
-            </Link>
+            <>
+              <Link to="/admin-orders" style={styles.navItem}>
+                📊 <span>Orders</span>
+              </Link>
+              <Link to="/admin-foods" style={styles.navItem}>
+                🍔 <span>Foods</span>
+              </Link>
+            </>
           ) : (
             <Link to="/dashboard" style={styles.navItem}>
               📊 <span>Dashboard</span>
@@ -220,6 +226,12 @@ function AppContent() {
             path="/admin-orders"
             element={
               isAdmin ? <AdminOrders user={user} /> : <AccessDenied />
+            }
+          />
+          <Route
+            path="/admin-foods"
+            element={
+              isAdmin ? <AdminFoods user={user} /> : <AccessDenied />
             }
           />
           <Route
